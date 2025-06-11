@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Portal</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+<body class="min-h-screen bg-gray-100 relative font-inter overflow-x-hidden">
+
+    <!-- Sticky Internship Banner -->
+    <div class="fixed top-0 left-0 z-40 p-3 bg-blue-600 text-white shadow-lg rounded-br-lg sm:p-4">
+        <a href="#apply" class="text-sm sm:text-base font-semibold hover:underline">
+            Apply for Internship
+        </a>
+    </div>
+
+    <!-- Hamburger Menu Icon for Mobile -->
+    <button id="sidebar-toggle"
+        class="fixed top-4 right-4 z-50 p-2 text-gray-800 bg-white rounded-full shadow-md lg:hidden focus:outline-none focus:ring-2 focus:ring-blue-500"
+        aria-label="Toggle sidebar">
+        <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+    </button>
+
+    <!-- Sidebar -->
+    <aside id="sidebar"
+        class="fixed inset-y-0 left-0 w-64 bg-gray-800 text-white shadow-xl z-40
+               transform -translate-x-full transition-transform duration-300 ease-in-out
+               lg:translate-x-0 lg:static lg:w-64 lg:flex lg:flex-col lg:flex-shrink-0">
+        <div class="p-6 text-2xl font-bold border-b border-gray-700">
+            Internship Portal
+        </div>
+        <nav class="mt-6">
+            <ul>
+                <li>
+                    <a href="#internship-application"
+                        class="block py-3 px-6 text-lg hover:bg-gray-700 transition-colors duration-200 rounded-lg mx-3 my-2 sidebar-link">
+                        Internship Application
+                    </a>
+                </li>
+                <li>
+                    <a href="#offer-letter-generation"
+                        class="block py-3 px-6 text-lg hover:bg-gray-700 transition-colors duration-200 rounded-lg mx-3 my-2 sidebar-link">
+                        Offer Letter Generation
+                    </a>
+                </li>
+                <li>
+                    <a href="#certificate-verification"
+                        class="block py-3 px-6 text-lg hover:bg-gray-700 transition-colors duration-200 rounded-lg mx-3 my-2 sidebar-link">
+                        Certificate Verification
+                    </a>
+                </li>
+                <li>
+                    <a href="#team-join-form"
+                        class="block py-3 px-6 text-lg hover:bg-gray-700 transition-colors duration-200 rounded-lg mx-3 my-2 sidebar-link">
+                        Team Join Form
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact-info"
+                        class="block py-3 px-6 text-lg hover:bg-gray-700 transition-colors duration-200 rounded-lg mx-3 my-2 sidebar-link">
+                        Contact Info
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="lg:ml-64 p-6 sm:p-8">
+        <h1 class="text-4xl font-extrabold text-gray-900 mb-6 mt-16 sm:mt-0">Welcome to the Internship Portal</h1>
+        <p class="text-lg text-gray-700 leading-relaxed mb-4">
+            Explore various opportunities and manage your internship journey seamlessly. Use the sidebar to navigate
+            through different sections, including applying for new internships, generating offer letters, verifying
+            certificates, joining a team, and finding contact information.
+        </p>
+
+        <!-- Dummy Content to enable scrolling -->
+        <section id="internship-application" class="bg-white p-6 rounded-lg shadow-md mb-8">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-4">Internship Application</h2>
+            <p class="text-gray-600">
+                Apply for exciting internship roles across various domains. Our streamlined application process makes it
+                easy to submit your details and resume.
+            </p>
+            <div
+                class="mt-4 h-48 bg-gray-50 flex items-center justify-center rounded-md border border-dashed border-gray-300 text-gray-500">
+                Application form content will go here.
+            </div>
+        </section>
+
+        <section id="offer-letter-generation" class="bg-white p-6 rounded-lg shadow-md mb-8">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-4">Offer Letter Generation</h2>
+            <p class="text-gray-600">
+                Once selected, easily generate and download your official internship offer letter.
+            </p>
+            <div
+                class="mt-4 h-48 bg-gray-50 flex items-center justify-center rounded-md border border-dashed border-gray-300 text-gray-500">
+                Offer letter preview and download options.
+            </div>
+        </section>
+
+        <section id="certificate-verification" class="bg-white p-6 rounded-lg shadow-md mb-8">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-4">Certificate Verification</h2>
+            <p class="text-gray-600">
+                Verify the authenticity of internship certificates issued by our organization.
+            </p>
+            <div
+                class="mt-4 h-48 bg-gray-50 flex items-center justify-center rounded-md border border-dashed border-gray-300 text-gray-500">
+                Certificate verification form.
+            </div>
+        </section>
+
+        <section id="team-join-form" class="bg-white p-6 rounded-lg shadow-md mb-8">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-4">Team Join Form</h2>
+            <p class="text-gray-600">
+                For new interns, fill out this form to officially join your assigned team and get access to necessary
+                resources.
+            </p>
+            <div
+                class="mt-4 h-48 bg-gray-50 flex items-center justify-center rounded-md border border-dashed border-gray-300 text-gray-500">
+                Team onboarding form.
+            </div>
+        </section>
+
+        <section id="contact-info" class="bg-white p-6 rounded-lg shadow-md mb-8">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-4">Contact Info</h2>
+            <p class="text-gray-600">
+                Get in touch with us for any queries or support regarding your internship.
+            </p>
+            <div
+                class="mt-4 h-48 bg-gray-50 flex items-center justify-center rounded-md border border-dashed border-gray-300 text-gray-500">
+                Contact details and inquiry form.
+            </div>
+        </section>
+
+        <div class="h-64"></div> <!-- More space for scrolling -->
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sidebar = document.getElementById('sidebar');
+            const sidebarToggle = document.getElementById('sidebar-toggle');
+            const hamburgerIcon = document.getElementById('hamburger-icon');
+            const closeIcon = document.getElementById('close-icon');
+            const sidebarLinks = document.querySelectorAll('.sidebar-link');
+
+            // Function to open/close the sidebar
+            const toggleSidebar = () => {
+                // Toggle 'translate-x-full' for the sidebar
+                sidebar.classList.toggle('-translate-x-full');
+                sidebar.classList.toggle('translate-x-0'); // Add translate-x-0 when open
+
+                // Toggle between hamburger and close icons
+                hamburgerIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+                // Set aria-expanded for accessibility
+                const isExpanded = sidebar.classList.contains('translate-x-0');
+                sidebarToggle.setAttribute('aria-expanded', isExpanded);
+                // Hide sidebar from screen readers when closed on small screens
+                if (window.innerWidth < 1024) {
+                    sidebar.setAttribute('aria-hidden', !isExpanded);
+                }
+            };
+
+            // Event listener for the hamburger/close button
+            sidebarToggle.addEventListener('click', toggleSidebar);
+
+            // Close sidebar when a navigation link is clicked (for mobile view)
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth < 1024 && sidebar.classList.contains('translate-x-0')) {
+                        toggleSidebar();
+                    }
+                });
+            });
+
+            // Close sidebar when clicking outside of it on smaller screens
+            document.addEventListener('mousedown', (event) => {
+                // Check if the click is outside the sidebar AND outside the toggle button
+                if (window.innerWidth < 1024 && sidebar.classList.contains('translate-x-0') &&
+                    !sidebar.contains(event.target) && !sidebarToggle.contains(event.target)) {
+                    toggleSidebar();
+                }
+            });
+
+            // Close sidebar on Escape key press
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && sidebar.classList.contains('translate-x-0')) {
+                    toggleSidebar();
+                }
+            });
+
+            // Handle initial state and resize for large screens
+            const handleResize = () => {
+                if (window.innerWidth >= 1024) {
+                    // Ensure sidebar is always visible and static on large screens
+                    sidebar.classList.remove('-translate-x-full');
+                    sidebar.classList.add('translate-x-0');
+                    sidebarToggle.classList.add('hidden'); // Hide toggle button on large screens
+                    sidebar.setAttribute('aria-hidden', 'false'); // Always visible for screen readers
+                } else {
+                    // On smaller screens, re-show the toggle and reset sidebar state
+                    sidebarToggle.classList.remove('hidden');
+                    // If sidebar is not open, ensure hamburger is shown and it's translated out
+                    if (!sidebar.classList.contains('translate-x-0')) {
+                        hamburgerIcon.classList.remove('hidden');
+                        closeIcon.classList.add('hidden');
+                        sidebar.classList.add('-translate-x-full');
+                        sidebar.classList.remove('translate-x-0');
+                        sidebar.setAttribute('aria-hidden', 'true');
+                    }
+                }
+            };
+
+            // Initial call to handleResize to set correct state on load
+            handleResize();
+            // Add resize event listener
+            window.addEventListener('resize', handleResize);
+        });
+    </script>
+</body>
+</html>
